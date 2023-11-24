@@ -1,0 +1,81 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "ADMIN API",
+        "contact": {}
+    },
+    "host": "localhost:5000",
+    "basePath": "/api",
+    "securityDefinitions": {},
+    "schemes": [
+        "http"
+    ],
+    "consume": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/singup/add": {
+            "post": {
+                "summary": "register",
+                "tags": [
+                    "User"
+                ],
+                "operationId": "register",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters":[
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "description": ""
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "description": ""
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "formData",
+                        "required": true,
+                        "type": "number",
+                        "description": ""
+                    },
+                    {
+                        "name": "gender",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "description": ""
+                    },
+                    {
+                        "name": "date",
+                        "in": "formData",
+                        "required": true,
+                        "type": "date",
+                        "description": ""
+                    },
+                    {
+                        "name": "hobby",
+                        "in": "formData",
+                        "type": "string",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    }
+}
